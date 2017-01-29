@@ -1,7 +1,7 @@
 module Messenger
   module Parameters
     module Callback
-      %w(message delivery optin postback read account_linking).each do |method|
+      %w(message delivery optin postback read account_linking quick_reply).each do |method|
         define_method("#{method}?") do
           type.include?(method)
         end
